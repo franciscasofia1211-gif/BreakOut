@@ -10,4 +10,6 @@ public class Bloque1 : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    //la idea de este bloque es que retendra la bola durante unos segundos y luego lo hara rebotar, como un slime
 }
