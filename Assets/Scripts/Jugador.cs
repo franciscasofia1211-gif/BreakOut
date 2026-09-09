@@ -18,14 +18,22 @@ public class Jugador : MonoBehaviour
         pos.x = MousePos3D.x;
         if (pos.x < -Tope)
         {
-          //pos.x = -Tope;
+          pos.x = -Tope;
         }
         else if (pos.x > Tope)
         {
-          //pos.x = Tope;
+          pos.x = Tope;
         }
         this.transform.position = pos;
-        //float h = Input.GetAxis("Horizontal") * Velocity * Time.deltaTime;
-        //transform.Translate(h,0,0);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bola") 
+        {
+            Vector3 direction = collision.contacts[0].point - transform.position;
+            direction = direction.normalized;
+            collision.rigidbody.linearVelocity = collision.gameObject.GetComponent<Bola>().velocidadBola * direction;
+        }
     }
 }

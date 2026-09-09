@@ -113,7 +113,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.000000059604645, y: 0, z: 0}
 --- !u!54 &7790900174052049264
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -154,3 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bloque5
   resistencia: 1
+  SumarPuntaje:
+    m_PersistentCalls:
+      m_Calls: []
